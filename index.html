@@ -17,6 +17,7 @@
       <main>
         <div class="container w-50">
           <h3 class="text-center" v-if="!toDos.length">Empty List</h3>
+
           <ul class="list-group">
             <li v-for="(item, index) in toDos" class="list-group-item d-flex justify-content-between align-items-center">
               {{ item }}
@@ -24,6 +25,11 @@
               <button type="button" class="btn-close" aria-label="Close" @click="removeItem(index)"></button>
             </li>
           </ul>
+
+          <div class="input-group my-5">
+            <input type="text" class="form-control" placeholder="Insert item" v-model="newItem">
+            <button class="btn btn-outline-secondary" type="button" @click="addItem">Add</button>
+          </div>
         </div>
       </main>
 
