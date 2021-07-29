@@ -13,7 +13,10 @@ const app = new Vue({
       this.toDos.splice(index, 1);
     },
     addItem() {
-      this.toDos.push(this.newItem);
+      if(this.newItem.trim() !== '') {
+        this.toDos.push(this.newItem);
+      }
+      this.newItem = '';
     }
   },
 });
