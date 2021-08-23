@@ -70,8 +70,13 @@ const app = new Vue({
       this.toDos = [];
     },
     selectAll() {
-      this.toDos.forEach((element) => {
-        element.done = true;
+      this.toDos.forEach((item) => {
+        item.done = true;
+      });
+    },
+    unselectAll() {
+      this.toDos.forEach((item) => {
+        item.done = false;
       });
     },
   },
