@@ -65,6 +65,9 @@ const app = new Vue({
     },
     isDone(index) {
       return this.toDos[index].done;
+    },
+    deleteAll() {
+      this.toDos = [];
     }
   },
 });
