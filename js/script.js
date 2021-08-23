@@ -68,6 +68,11 @@ const app = new Vue({
     },
     deleteAll() {
       this.toDos = [];
-    }
+    },
+    selectAll() {
+      this.toDos.forEach((element) => {
+        element.done = true;
+      });
+    },
   },
 });
